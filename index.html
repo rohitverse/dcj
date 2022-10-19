@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
+        #navbar {
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+        }
+
+        #navbar a {
+            float: left;
+            color: #264cca;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        #navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .topnav-right {
+  float: right;
+}
+        footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #303841;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: grid;
+            /* grid-gap: 1rem; */
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'section section section aside'
+                'section section section aside'
+                'footer footer footer footer ';
+        }
+
+        .item {
+            /* background-color: yellow; */
+            /* border: 0.5px solid rgb(184, 184, 184); */
+            /* padding: 12px 23px; */
+        }
+       
+
+        #navbar {
+            grid-area: navbar;
+            /* background-image: url("112.png");
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 20px; */
+        }
+
+        #section {
+            grid-area: section;
+            background-image: url("112.png");
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px ;
+            margin:20px;
+        }
+
+        #aside {
+            grid-area: aside;
+            background-image: url("112.png");
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px ;
+            margin:20px;
+        }
+        
+        footer {
+            grid-area: footer;
+        }
+        table{
+            display: inline-table;
+        }
+        th{
+            padding: 30px;
+            color:#ddd;
+            font-family:'Courier New', Courier, monospace;
+        }
+        td{
+            padding:10px 30px 10px 30px;
+            color:#ddd;
+        }
+        input,button{
+padding:10px;
+border-radius: 5px solid white;
+        }
+    .br{
+        width: 100%;
+            background-color: #303841;
+            text-align: center;
+            color: white;
+            border: 1px solid rgb(112, 102, 102);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+            <a class="active" href="#home">Home</a>
+           <div class="topnav-right">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        </div>
+
+    </div>
+    <div id="section" class="item">
+       uos mollitia eos porro odit, distinctio consectetur in. Magni, quam accusamus
+        quibusdam eligendi nobis nulla, eveniet nesciunt hic perspiciatis maxime repudiandae excepturi, animi
+        consequuntur. Nam tempore exercitationem ad laboriosam libero quis inventore iste minus illo totam? Rem,
+        eligendi excepturi ducimus similique vero doloribus eveniet quas doloremque. Doloribus tenetur voluptatibus quo
+        sit deserunt laboriosam doloremque. Eaque aliquam error incidunt? Illo rem quibusdam numquam omnis aliquam
+        ipsam, doloremque sequi mollitia nobis harum eius suscipit officiis labore, fugit nemo quidem autem ex, eos
+        quisquam iusto. Maxime totam debitis quis provident pariatur fugiat aliquam, alias praesentium? Laudantium sint,
+        aliquam porro obcaecati numquam at explicabo totam harum iure debitis asperiores quod cumque neque dolores
+        accusantium, tempore ipsa quo quae perspiciatis aperiam natus reprehenderit dolorum quam. Consectetur, laborum
+        voluptatibus ullam libero voluptas perspiciatis maiores eligendi id dolorum suscipit perferendis blanditiis,
+        dignissimos nemo consequuntur voluptate tempora velit numquam, eos maxime optio voluptatem odio. Sequi et
+        tempore a quos praesentium.
+    </div>
+    <div id="section" class="item">
+        uos mollitia eos porro odit, distinctio consectetur in. Magni, quam accusamus
+         quibusdam eligendi nobis nulla, eveniet nesciunt hic perspiciatis maxime repudiandae excepturi, animi
+         consequuntur. Nam tempore exercitationem ad laboriosam libero quis inventore iste minus illo totam? Rem,
+         eligendi excepturi ducimus similique vero doloribus eveniet quas doloremque. Doloribus tenetur voluptatibus quo
+         sit deserunt laboriosam doloremque. Eaque aliquam error incidunt? Illo rem quibusdam numquam omnis aliquam
+         ipsam, doloremque sequi mollitia nobis harum eius suscipit officiis labore, fugit nemo quidem autem ex, eos
+         quisquam iusto. Maxime totam debitis quis provident pariatur fugiat aliquam, alias praesentium? Laudantium sint,
+         aliquam porro obcaecati numquam at explicabo totam harum iure debitis asperiores quod cumque neque dolores
+         accusantium, tempore ipsa quo quae perspiciatis aperiam natus reprehenderit dolorum quam. Consectetur, laborum
+         voluptatibus ullam libero voluptas perspiciatis maiores eligendi id dolorum suscipit perferendis blanditiis,
+         dignissimos nemo consequuntur voluptate tempora velit numquam, eos maxime optio voluptatem odio. Sequi et
+         tempore a quos praesentium.
+     </div>
+     <div id="section" class="item">
+        uos mollitia eos porro odit, distinctio consectetur in. Magni, quam accusamus
+         quibusdam eligendi nobis nulla, eveniet nesciunt hic perspiciatis maxime repudiandae excepturi, animi
+         consequuntur. Nam tempore exercitationem ad laboriosam libero quis inventore iste minus illo totam? Rem,
+         eligendi excepturi ducimus similique vero doloribus eveniet quas doloremque. Doloribus tenetur voluptatibus quo
+         sit deserunt laboriosam doloremque. Eaque aliquam error incidunt? Illo rem quibusdam numquam omnis aliquam
+         ipsam, doloremque sequi mollitia nobis harum eius suscipit officiis labore, fugit nemo quidem autem ex, eos
+         quisquam iusto. Maxime totam debitis quis provident pariatur fugiat aliquam, alias praesentium? Laudantium sint,
+         aliquam porro obcaecati numquam at explicabo totam harum iure debitis asperiores quod cumque neque dolores
+         accusantium, tempore ipsa quo quae perspiciatis aperiam natus reprehenderit dolorum quam. Consectetur, laborum
+         voluptatibus ullam libero voluptas perspiciatis maiores eligendi id dolorum suscipit perferendis blanditiis,
+         dignissimos nemo consequuntur voluptate tempora velit numquam, eos maxime optio voluptatem odio. Sequi et
+         tempore a quos praesentium.
+     </div>
+    <div id="aside" class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas soluta expedita quis!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam beatae laudantium nihil aliquam quisquam,
+        suscipit, tempora maxime excepturi vitae animi voluptatem dignissimos cumque nobis obcaecati, eius temporibus
+        vel maiores distinctio minus autem eveniet consequuntur magni. Id nostrum, sunt
+        cum nesciunt dolore quisquam eligendi dolorem recusandae, beatae quis eveniet, aut velit itaque neque
+       eiciendis officiis eveniet, suscipit eaque quae tempora omnis earum ipsum sapiente
+        nostrum neque itaque consequuntur maiores. Saepe officia dolores inventore! Natus et aliquid dolorem eius
+        delectus, architecto dolor non atque beatae aperiam ipsum numquam quae deserunt voluptates voluptate maxime, cum
+        quis ex quia quaerat placeat illo. Distinctio, atque, adipisci officia alias excepturi facere iure minus non
+        voluptas dolore quidem architecto impedit nostrum optio delectus expedita possimus hic, repudiandae iste ipsa
+        eveniet tempore. Impedit, cupiditate.
+    </div>
+</div>
+
+    </div>
+    <footer class="item">
+        <div class="table">
+        <table>
+            <tr><th>About</th>
+            <th>Help</th>
+            <th>Policy</th>
+            <th>Social</th>
+    </tr>
+            <tr><td>Social</td>
+                <td>Store</td>
+                <td>Login</td><td>Linkedin</td>
+                </tr>
+                <tr><td>Social</td>
+                    <td>Store</td>
+                    <td>Login</td><td>Linkedin</td></tr>
+                    <tr><td>Social</td>
+                        <td>Store</td>
+                        <td>Login</td><td>Linkedin</td>
+                        </tr>
+                    
+        </table> 
+        <table>
+            <tr>
+            <th>Subscribe</th> </tr>
+            <tr><td><input type="email" placeholder="Enter your Emai Addess" id=""></td>
+            
+            </tr>
+            <tr><td><input type="submit"></td>
+            
+            </tr>
+        </table> 
+        
+    </div>
+  
+    </footer> 
+    <div class="br"></div>
+    <footer class="item">CopyRight 2022</footer>
+    </div>
+</body>
+
+</html>
